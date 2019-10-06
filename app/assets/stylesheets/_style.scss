@@ -47,16 +47,14 @@ html, body {
             display: list-item;
             text-align: -webkit-match-parent;
             margin-left: 0.3rem;
-            a {
-              color: $MenuWhiteColor;
               .fa {
                 display: inline-block;
+                color: $MenuWhiteColor;
                 font: normal normal normal 14px/1 FontAwesome;
                 font-size: inherit;
                 text-rendering: auto;
                 -webkit-font-smoothing: antialiased;
-              }
-            }
+               }
           }
         }
       }

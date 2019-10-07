@@ -69,9 +69,11 @@ html, body {
         &__group-name {
           font-size: 15px;
           margin-bottom: 5px;
+          color: $WhiteColor
         }
         &__message {
           font-size: 11px;
+          color: $WhiteColor
         }
       }
     }
@@ -113,6 +115,10 @@ html, body {
         border: solid 1px $LightBlueColor;
         position: absolute;
         right: 40px;
+        &__letter {
+          color: $LightBlueColor;
+          // text-decoration: none; 機能しない
+        }
       }
     }
     &__chat {

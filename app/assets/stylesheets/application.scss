@@ -1,5 +1,7 @@
-@import "./reset";
-@import "./variable";
-@import "./flex";
-@import "./style";
+@import "config/reset";
+@import "config/variable";
+@import "mixins/flex";
+@import "modules/style";
 @import "font-awesome";
+@import "modules/user";
+@import "modules/flash";

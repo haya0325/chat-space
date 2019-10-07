@@ -1,28 +1,12 @@
 %html
   %body
 
-    %div.announce-box
-      グループを作成しました
+    -# %div.announce-box
+    -#   グループを作成しました
 
     %div.wrapper
 
-      %div.menu
-        %div.menu__header
-          =render partial: 'user';
-        %div.menu__list
-          %div.menu__list__group
-            %p.menu__list__group__group-name
-              test-group
-            %p.menu__list__group__message
-              おはよう!
-          %div.menu__list__group
-            %p.menu__list__group__group-name
-              example
-            %p.menu__list__group__message
-              こんにちは
-          %div.menu__list__group
-            %p.menu__list__group__group-name
-            %p.menu__list__group__message
+      =render partial: 'shared/side_bar';
 
       %div.contents
         %div.contents__header
@@ -33,7 +17,9 @@
               Member：
               %li.contents__header__left-box__member-list__member
                 test-user
-          %div.contents__header__edit-btn Edit
+          %div.contents__header__edit-btn
+            = link_to edit_group_path(current_user) do
+              %p.contents__header__edit-btn__letter Edit
         %div.contents__chat
           %div.contents__chat__box
             %div.contents__chat__box__top-box
@@ -52,5 +38,5 @@
             %p.contents__chat__box__message
               こんにちは
         %div.contents__form
-          =render partial: 'form';
+          =render partial: 'form'
 

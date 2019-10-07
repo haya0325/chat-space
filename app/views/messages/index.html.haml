@@ -38,5 +38,11 @@
             %p.contents__chat__box__message
               こんにちは
         %div.contents__form
-          =render partial: 'form'
+          = form_for [@group, @message] do |f|
+            = f.text_field :body, class: 'contents__form__message', placeholder: 'type a message'
+            %div.contents__form__mask
+              = f.label :image, class: 'contents__form__mask__image' do
+                = fa_icon 'picture-o', class: 'icon'
+                = f.file_field :image, class: 'hidden'
+            = f.submit 'Send', class: 'contents__form__submit'
 

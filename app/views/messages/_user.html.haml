@@ -1,10 +1,10 @@
 %div.menu__header__box
   %p.menu__header__box__name
-    test-user
+    = current_user.name
   %ul.menu__header__box__menu-button
     %li.menu__header__box__menu-button__new-group
-      = link_to do
+      = link_to new_group_path do
         %i.fa.fa-edit
     %li.menu__header__box__menu-button__setting
-      = link_to do
+      = link_to edit_user_path(current_user) do
         %i.fa.fa-cog

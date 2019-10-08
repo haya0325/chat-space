@@ -43,10 +43,10 @@ html, body {
         ul {
           @include flex();
           padding-inline-start: 40px;
-          li {
-            display: list-item;
-            text-align: -webkit-match-parent;
-            margin-left: 0.3rem;
+          // li {
+          //   display: list-item;
+          //   text-align: -webkit-match-parent;
+          //   margin-left: 0.3rem;
               .fa {
                 display: inline-block;
                 color: $WhiteColor;
@@ -55,7 +55,7 @@ html, body {
                 text-rendering: auto;
                 -webkit-font-smoothing: antialiased;
                }
-          }
+          // }
         }
       }
     }

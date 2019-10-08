@@ -1,9 +1,6 @@
 %html
   %body
 
-    -# %div.announce-box
-    -#   グループを作成しました
-
     %div.wrapper
 
       =render partial: 'shared/side_bar';
@@ -12,31 +9,18 @@
         %div.contents__header
           %div.contents__header__left-box
             %h2.contents__header__left-box__current-group
-              test-group
+              = @group.name
             %ul.contents__header__left-box__member-list
               Member：
-              %li.contents__header__left-box__member-list__member
-                test-user
+              - @group.users.each do |user|
+                = user.name
           %div.contents__header__edit-btn
             = link_to edit_group_path(current_user) do
               %p.contents__header__edit-btn__letter Edit
+
         %div.contents__chat
-          %div.contents__chat__box
-            %div.contents__chat__box__top-box
-              %p.contents__chat__box__top-box__name
-                test-user
-              %p.contents__chat__box__top-box__time
-                2019/10/03(Thu) 10:36:11
-            %p.contents__chat__box__message
-              おはよう
-          %div.contents__chat__box
-            %div.contents__chat__box__top-box
-              %p.contents__chat__box__top-box__name
-                test-user
-              %p.contents__chat__box__top-box__time
-                2019/10/03(Thu) 10:45:00
-            %p.contents__chat__box__message
-              こんにちは
+          = render @messages
+
         %div.contents__form
           = form_for [@group, @message] do |f|
             = f.text_field :body, class: 'contents__form__message', placeholder: 'type a message'
@@ -45,4 +29,3 @@
                 = fa_icon 'picture-o', class: 'icon'
                 = f.file_field :image, class: 'hidden'
             = f.submit 'Send', class: 'contents__form__submit'
-

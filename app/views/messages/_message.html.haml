@@ -1,0 +1,12 @@
+%div.contents__chat__box
+  %div.contents__chat__box__top-box
+    %div.contents__chat__box__top-box__name
+      = message.user.name
+    %div.contents__chat__box__top-box__time
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
+  %div.contents__chat__box__message
+    - if message.body.present?
+      %p.contents__chat__box__message__text
+        = message.body
+    = image_tag message.image.url, class: 'contents__chat__box__message__image' if message.image.present?
+  

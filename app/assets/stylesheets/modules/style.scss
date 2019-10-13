@@ -125,7 +125,7 @@ html, body {
       height: calc(100vh - 190px);
       padding: 46px 40px;
       background-color: #fafafa;
-      overflow: scroll;
+      overflow: auto;
       &__box {
         padding-bottom: 40px;
         &__top-box {

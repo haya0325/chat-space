@@ -14,7 +14,7 @@
               Member：
               - @group.users.each do |user|
                 = user.name
-          %div.contents__header__edit-btn
+          %div.contents__header__edit-btn{"data-turbolinks": "false"}
             = link_to edit_group_path(current_user) do
               %p.contents__header__edit-btn__letter Edit
 

@@ -22,7 +22,11 @@ li {
   font-size: 13px;
 }
 
-
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 
 .chat-group-form {
   width: 980px;
@@ -58,6 +62,7 @@ li {
     color: #fff;
     background-color: #38aef0;
     border: 0;
+    margin-top: 30px;
   }
   &__field {
     margin-top: 30px;
@@ -105,3 +110,4 @@ li {
     }
   }
 }
+

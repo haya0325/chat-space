@@ -25,7 +25,6 @@ html, body {
     color: $WhiteColor;
     float: left;
     width: 300px;
-
     &__header {
       @include flex();
       background-color: #253141;
@@ -70,11 +69,14 @@ html, body {
           font-size: 11px;
           color: $WhiteColor
         }
+        a {
+          text-decoration: none;
+        }
       }
-    }
-    
-    
+    }   
   }
+
+
   .contents {
     float: left;
     width: calc(100vw - 300px);
@@ -111,10 +113,14 @@ html, body {
         position: absolute;
         right: 40px;
         &__letter {
-          color: $LightBlueColor;
+          color: $LightBlueColor;       
+        }
+        a {
+          text-decoration: none;
         }
       }
     }
+
     &__chat {
       height: calc(100vh - 190px);
       padding: 46px 40px;
@@ -143,6 +149,7 @@ html, body {
         }
       }
     }
+    
     &__form {
       height: 90px;
       padding: 20px 40px;

@@ -28,8 +28,8 @@ html, body {
     &__header {
       @include flex();
       background-color: #253141;
-      height: 100px;     
-      align-items: center;
+      height: 100px;    
+      line-height: 100px; 
       padding: 0 20px;
       &__box {
         @include flex();
@@ -37,19 +37,18 @@ html, body {
         justify-content: space-between;
         width: 100%;
         p {
+          display: inline-block;
           font-size: 16px;
         }
         ul {
-          @include flex();
-          padding-inline-start: 40px;
-              .fa {
-                display: inline-block;
+          display: inline-block;
+          li {
+            display: inline-block;       
+              .fa {               
                 color: $WhiteColor;
-                font: normal normal normal 14px/1 FontAwesome;
-                font-size: inherit;
-                text-rendering: auto;
-                -webkit-font-smoothing: antialiased;
-               }
+                font-size: 16px;
+              }
+          }
         }
       }
     }
@@ -149,7 +148,7 @@ html, body {
         }
       }
     }
-    
+
     &__form {
       height: 90px;
       padding: 20px 40px;
